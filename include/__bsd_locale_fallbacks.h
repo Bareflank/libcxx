@@ -14,6 +14,7 @@
 #ifndef _LIBCPP_BSD_LOCALE_FALLBACKS_DEFAULTS_H
 #define _LIBCPP_BSD_LOCALE_FALLBACKS_DEFAULTS_H
 
+#include <cstdio>
 #include <stdlib.h>
 #include <memory>
 

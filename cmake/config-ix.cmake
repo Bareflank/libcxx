@@ -43,9 +43,15 @@ if (LIBCXX_SUPPORTS_NODEFAULTLIBS_FLAG)
   endif ()
 endif ()
 
-if(NOT WIN32 OR MINGW)
-  include(CheckLibcxxAtomic)
-endif()
+# ------------------------------------------------------------------------------
+# bareflank: start
+# ------------------------------------------------------------------------------
+# if(NOT WIN32 OR MINGW)
+#   include(CheckLibcxxAtomic)
+# endif()
+# ------------------------------------------------------------------------------
+# bareflank: end
+# ------------------------------------------------------------------------------
 
 # Check compiler flags
 
