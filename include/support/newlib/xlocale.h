@@ -16,7 +16,13 @@
 #include <clocale>
 #include <cwctype>
 #include <ctype.h>
-#include <support/xlocale/__nop_locale_mgmt.h>
+// -----------------------------------------------------------------------------
+// bareflank: start
+// -----------------------------------------------------------------------------
+// #include <support/xlocale/__nop_locale_mgmt.h>
+// -----------------------------------------------------------------------------
+// bareflank: end
+// -----------------------------------------------------------------------------
 #include <support/xlocale/__posix_l_fallback.h>
 #include <support/xlocale/__strtonum_fallback.h>
 

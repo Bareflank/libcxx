@@ -99,11 +99,17 @@ thread::hardware_concurrency() _NOEXCEPT
 #else  // defined(CTL_HW) && defined(HW_NCPU)
     // TODO: grovel through /proc or check cpuid on x86 and similar
     // instructions on other architectures.
-#   if defined(_MSC_VER) && ! defined(__clang__)
-        _LIBCPP_WARNING("hardware_concurrency not yet implemented")
-#   else
-#       warning hardware_concurrency not yet implemented
-#   endif
+// -----------------------------------------------------------------------------
+// bareflank: start
+// -----------------------------------------------------------------------------
+// #   if defined(_LIBCPP_MSVC)
+//         _LIBCPP_WARNING("hardware_concurrency not yet implemented")
+// #   else
+// #       warning hardware_concurrency not yet implemented
+// #   endif
+// -----------------------------------------------------------------------------
+// bareflank: end
+// -----------------------------------------------------------------------------
     return 0;  // Means not computable [thread.thread.static]
 #endif  // defined(CTL_HW) && defined(HW_NCPU)
 }
